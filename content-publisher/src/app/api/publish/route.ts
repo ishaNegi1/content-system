@@ -25,6 +25,18 @@ export async function POST(request: NextRequest) {
       published: true,
     });
 
+    // Trigger revalidation on the content website
+    const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+    if (websiteUrl) {
+      try {
+        await fetch(`${websiteUrl}/api/revalidate`, {
+          method: "POST",
+        });
+      } catch (revalidateError) {
+        console.error("Revalidation failed:", revalidateError);
+      }
+    }
+
     return NextResponse.json({
       success: true,
       id: document._id,
