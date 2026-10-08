@@ -2,7 +2,7 @@
 
 <h2>1. Overview</h2>
 
-<p>I created a small content publishing tool using two Next.js apps and Sanity as the CMS. The first application is be used to add and post text. The second application shows the published content to users. Both applications are deployed separately on Vercel.</p>
+<p>I created a small content publishing tool using two Next.js apps and Sanity as the CMS. The first application is used to add and post text. The second application shows the published content to users. Both applications are deployed separately on Vercel.</p>
 
 <h2>2. Architecture</h2>
 
