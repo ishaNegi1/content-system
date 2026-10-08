@@ -35,8 +35,11 @@ export default function Home() {
       setMessage("Content published successfully.");
 
       setTimeout(() => {
-        window.location.href =
-          process.env.NEXT_PUBLIC_WEBSITE_URL!;
+        window.open(
+  process.env.NEXT_PUBLIC_WEBSITE_URL!,
+  "_blank",
+  "noopener,noreferrer"
+);
       }, 700);
     } catch (error) {
       setMessage(
